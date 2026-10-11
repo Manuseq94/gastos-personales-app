@@ -1,10 +1,11 @@
+
 #!/bin/sh
 set -eu
 
-echo "[inicio] Preparacion de la base de datos..."
+echo "[inicio] Preparando la base de datos..."
 
 php /var/www/html/docker/init-db.php
 
-echo "[inicio] Base de datos lista. Iniciando Apache..."
+echo "[inicio] Base de datos lista. Iniciando servidor PHP..."
 
-exec apache2-foreground
+exec php -S "0.0.0.0:${PORT:-8080}" -t /var/www/html
