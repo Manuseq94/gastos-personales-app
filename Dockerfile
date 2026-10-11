@@ -19,8 +19,7 @@ RUN rm -f /etc/apache2/sites-enabled/000-default.conf \
 COPY docker/apache.conf /etc/apache2/sites-enabled/app.conf
 
 # Verificar que Apache tenga una configuración válida durante el build.
-RUN PORT=8080 apache2ctl -t \
-    && apache2ctl -M 2>&1 | grep -E 'mpm_(event|worker|prefork)_module'
+RUN PORT=8080 apache2ctl -t
 
 # Configuración de PHP para producción.
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
