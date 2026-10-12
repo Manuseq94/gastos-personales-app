@@ -1,8 +1,6 @@
 <?php
 /*
- * Este archivo maneja el envío opcional de email de bienvenida con Brevo.
- * Si no configurás BREVO_API_KEY en .env, no pasa nada: se omite en silencio.
- * Esto está pensado así para que la app siga funcionando igual en local.
+ * Este archivo maneja el envío de email de bienvenida con Brevo.
  */
 
 require_once __DIR__ . '/../config/database.php';

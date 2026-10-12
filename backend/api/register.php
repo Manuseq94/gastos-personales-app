@@ -31,7 +31,7 @@ $nombre = trim((string) $datos['nombre']);
 $email = strtolower(trim((string) $datos['email']));
 $password = (string) $datos['password'];
 
-// El día de cierre ya no se pide al registrarse: arranca en el valor por defecto
+// El día de cierre arranca en el valor por defecto
 // y el usuario lo cambia desde la app (configuracion.php). Si llega en el body, se ignora.
 $diaCierre = DIA_CIERRE_POR_DEFECTO;
 

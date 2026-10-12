@@ -4,17 +4,17 @@ Aplicación web fullstack para registrar y administrar gastos personales, ingres
 
 **Grupo N° 3 — Trabajo Práctico N° 1**
 
-Integrante    - Aporte principal
+Integrante    - Aportes
 
-Sebastián Almirón: Backend (endpoints CRUD de gastos e ingresos, validaciones)
-Santino Fernández: Backend (autenticación, tokens de sesión, seguridad)
-Sebastián Infante: Frontend (JS, formularios, lógica de cliente)
-Emanuel Sequeira: Integración con servicios externos (Brevo, API de cotización)
-Tomás Zucchi: Infraestructura (Docker, Railway, base de datos, README)
+Sebastián Almirón: Integración con servicios externos (Brevo, API de cotización), README
+Santino Fernández: Frontend (JS, formularios, lógica de cliente), README
+Sebastián Infante: Backend (autenticación, tokens de sesión, seguridad), README
+Emanuel Sequeira: Infraestructura (Docker, Railway, base de datos), README
+Tomás Zucchi: Backend (endpoints CRUD de gastos e ingresos, validaciones), README
 
 ## URL pública
 
-- **Frontend:** gastos-personales-app-production-7228.up.railway.app
+- **Frontend:** https://gastos-personales-production-f7bc.up.railway.app/frontend/dashboard.html
 - **API base:** https://gastos-personales-production-f7bc.up.railway.app/backend/api
 - **Proveedor:** Railway (PaaS — Platform as a Service)
   Railway gestiona la infraestructura completa: servidores, red, TLS, DNS y el servicio MySQL, sin que el equipo administre VMs ni sistemas operativos. Proporciona HTTPS automático y base de datos en la nube.
@@ -77,7 +77,6 @@ gastos-personales/
 │       └── configuracion.php
 ├── docker/
 │   ├── apache.conf
-│   ├── init-db.php
 │   └── schema.sql
 └── frontend/
     ├── index.html
@@ -122,20 +121,6 @@ gastos-personales/
 La imagen (PHP 8.3 + Apache) sirve `frontend/` y `backend/api/`. Al arrancar, `docker/init-db.php` espera a MySQL y crea las tablas de `docker/schema.sql` si no existen.
 
 **Local con Docker:** `docker compose up --build` y abrí `http://localhost:8080`.
-
-**Railway:**
-
-1. Creá un proyecto y agregá un servicio **MySQL**.
-2. Agregá un servicio desde este repo de GitHub (usa el `Dockerfile` vía `railway.json`).
-3. En las variables del servicio de la app cargá referencias al MySQL:
-   ```
-   DB_HOST=${{MySQL.MYSQLHOST}}
-   DB_PORT=${{MySQL.MYSQLPORT}}
-   DB_NAME=${{MySQL.MYSQLDATABASE}}
-   DB_USER=${{MySQL.MYSQLUSER}}
-   DB_PASS=${{MySQL.MYSQLPASSWORD}}
-   ```
-4. En **Settings → Networking** generá un dominio público. La raíz redirige a `/frontend/`.
 
 ## Variables de entorno
 

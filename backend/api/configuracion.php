@@ -25,7 +25,7 @@ $usuario = requerirUsuarioAutenticado($pdo);
 
 try {
     if ($metodo === 'GET') {
-        // requerirUsuarioAutenticado ya trae dia_cierre_balance: no hace falta otra consulta.
+        // requerirUsuarioAutenticado ya trae dia_cierre_balance
         responderExito('Configuración obtenida correctamente.', array(
             'dia_cierre_balance' => $usuario['dia_cierre_balance'],
         ));

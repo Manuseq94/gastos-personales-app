@@ -108,7 +108,6 @@ function obtenerConexion()
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             PDO::ATTR_EMULATE_PREPARES => false,
             // rowCount() de un UPDATE devuelve filas ENCONTRADAS y no solo las modificadas.
-            // Sin esto, guardar un registro sin cambios respondía 404 por error.
             PDO::MYSQL_ATTR_FOUND_ROWS => true,
         ));
 

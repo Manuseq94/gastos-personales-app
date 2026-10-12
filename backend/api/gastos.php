@@ -6,7 +6,6 @@
  * Reglas de negocio del medio de pago:
  * - efectivo, billetera_virtual y debito: solo se informa el monto (pago en 1 vez).
  * - credito: se informa monto y cantidad de cuotas; el valor de cuota lo calcula el servidor.
- * El backend es la única fuente de verdad: valor_cuota y valor_total que mande el cliente se ignoran.
  */
 
 require_once __DIR__ . '/../config/database.php';
@@ -62,7 +61,6 @@ function validarTarjetaSegunMetodo($pdo, $usuarioId, $metodoPago, $tarjetaId)
 /**
  * Calcula el plan de pago según el método.
  * Solo crédito admite cuotas; el resto siempre es 1 pago por el monto total.
- * Devuelve array(cantidad_cuotas, valor_cuota, valor_total).
  */
 function calcularPlanDePago($metodoPago, $monto, $datos)
 {

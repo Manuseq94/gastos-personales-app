@@ -68,7 +68,7 @@ const DIA_CIERRE_POR_DEFECTO = 1;
 
 /**
  * Valida el día de cierre de balance.
- * Rechaza valores no enteros (ej: "3.5") en lugar de truncarlos en silencio.
+ * Rechaza valores no enteros (ej: "3.5") en lugar de truncarlos.
  */
 function validarDiaCierre($dia)
 {
@@ -103,7 +103,7 @@ const CUOTAS_MAXIMAS = 60;
 
 /**
  * Valida la cantidad de cuotas de una compra con crédito.
- * Rechaza valores no enteros ("3.5", "abc") en vez de truncarlos en silencio.
+ * Rechaza valores no enteros ("3.5", "abc") en vez de truncarlos.
  */
 function validarCantidadCuotas($cuotas)
 {
