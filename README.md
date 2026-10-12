@@ -14,7 +14,7 @@ Tomás Zucchi: Backend (endpoints CRUD de gastos e ingresos, validaciones), READ
 
 ## URL pública
 
-- **Frontend:** https://gastos-personales-production-f7bc.up.railway.app/frontend/dashboard.html
+- **Frontend:** https://gastos-personales-app-production-7228.up.railway.app/frontend/index.html
 - **API base:** https://gastos-personales-production-f7bc.up.railway.app/backend/api
 - **Proveedor:** Railway (PaaS — Platform as a Service)
   Railway gestiona la infraestructura completa: servidores, red, TLS, DNS y el servicio MySQL, sin que el equipo administre VMs ni sistemas operativos. Proporciona HTTPS automático y base de datos en la nube.
